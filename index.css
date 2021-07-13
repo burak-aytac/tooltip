@@ -1,0 +1,118 @@
+*{
+  
+    padding: 0;
+    box-sizing: content-box;
+    
+}
+#container{
+    border: 1px solid red;
+
+}
+#blocks{
+    margin: 45px;
+    display: flex;
+    justify-content:space-around;
+
+}
+.box{
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    padding: 15px;
+    transition: box-shadow 1s, background-color 1s, font-size 1s;
+    position: relative;
+}
+
+.tooltip{
+    border: 1px solid black;
+    height: 35px;
+    width: 60px;
+    box-sizing: border-box;
+}
+.text{
+    display: none;
+    background-color: black;
+    position: absolute;
+    top: -40px;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    width: 100px;
+}
+
+
+.box:hover{
+    cursor: pointer;
+    box-shadow: 10px 10px 10px;
+    background-color: blanchedalmond;
+    font-size: 18px;
+}
+.box:hover .text{
+    display: block;
+}
+.right{
+    top: 35%;
+    left: 110%;
+    z-index: 1;
+}
+.right::after{
+    position: absolute;
+    content: "";
+    left: -8px;
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-bottom: 8px solid transparent;  
+    border-right:8px solid rgb(0, 0, 0); 
+}
+
+.bottom{
+   
+    top: 110%;
+    left: 15%;
+    z-index: 1;
+}
+.bottom::after{
+    position: absolute;
+    content: "";
+    left: 35px;
+    top: -15px;
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid  rgb(0, 0, 0);
+    border-left: 8px solid transparent;  
+    border-right:8px solid transparent; 
+
+}
+.left{
+    top: 35%;
+    left: -90%;
+    z-index: 1;
+}
+.left::after{
+    position: absolute;
+    content: "";
+    top: 8px;
+    left: 110px;
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid  transparent;
+    border-left: 8px solid rgb(0, 0, 0);  
+    border-right:8px solid transparent; 
+}
+
+.top::after{
+    position: absolute;
+    content: "";
+    top: 28px;
+    left: 50px;
+    width: 0; 
+    height: 0; 
+    border-top: 8px solid rgb(0, 0, 0);
+    border-bottom: 8px solid  transparent;
+    border-left: 8px solid transparent;  
+    border-right:8px solid transparent; 
+
+}
+
